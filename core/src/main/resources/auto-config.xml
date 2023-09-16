@@ -10,8 +10,8 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	<context:annotation-config />
 
 	<bean id="hotel1" class="core.chap3.Hotel">
-		<property name="headShef" ref="asianChef" />
-		<property name="restaurant" ref="asianRes" />	
+		<constructor-arg ref="asianChef" />
+		<constructor-arg ref="asianRes" />	
 	</bean>
 	<bean id="asianRes" class="core.chap3.AsianRestaurant" />
 	<bean id="sushi" class="core.chap3.SushiCourse" />

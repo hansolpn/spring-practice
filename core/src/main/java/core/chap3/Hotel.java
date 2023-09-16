@@ -1,5 +1,7 @@
 package core.chap3;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Hotel {
 	
 	// 제어의 역전(IoC): 객체 생성의 제어권을 외부로 넘긴다.
@@ -14,6 +16,7 @@ public class Hotel {
 	public Hotel() {}
 	
 	// 생성자 주입
+	@Autowired
 	public Hotel(IRestaurant restaurant, IChef headShef) {
 		super();
 		this.restaurant = restaurant;
